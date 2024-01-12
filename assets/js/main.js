@@ -36,10 +36,37 @@ const productSlider = new Swiper('.product-slider', {
         },
     },
 });
-
 function getDirection() {
     let windowWidth = window.innerWidth;
-    let direction = window.innerWidth <= 600 ? 'vertical' : 'horizontal';
-
-    return direction;
+    return windowWidth <= 600 ? 'vertical' : 'horizontal';
 }
+
+//open dropMenu
+function toggleDropMenu() {
+    let toggleDropButton = document.querySelectorAll('[data-drop]');
+    
+    for (let a = 0; a < toggleDropButton.length; a++) {
+        let dataDrop = toggleDropButton[a].getAttribute('data-drop');
+
+        toggleDropButton[a].onclick = function () {
+            this.classList.toggle('is-active');
+
+            let toggleDropBox = document.querySelectorAll(`[data-drop-box="${dataDrop}"]`)[0];
+            toggleDropBox.classList.toggle('is-hidden');
+            toggleDropBox.classList.toggle('is-active');
+        }
+        document.querySelector('.overlay').addEventListener('click', function(){
+            this.classList.remove('is-active');
+        });
+    }
+}
+toggleDropMenu();
+
+//scroll to up
+document.querySelector('.btn-scroll-top').addEventListener('click', function(){
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    });
+});
