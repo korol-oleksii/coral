@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+@@include('./html/head.html', {
+title: "Coral Collections | Internet-shop"
+})
+<body>
+
+<div class="wrapper">
+    <div class="wrapper__container">
+        <!-- header -->
+        @@include('./html/header.html', {})
+        <!-- main -->
+        <main class="main">
+            <div class="main__body">
+                <div class="main__content">
+                    <!-- main slider -->
+                    @@include('./html/main-slider.html', {})
+                    <!-- brands logo -->
+                    @@include('./html/main-brands.html', {})
+                    <!-- sale-hot products -->
+                    @@include('./html/main-hot-products.html', {})
+                    <!-- products card -->
+                    @@include('./html/main-products-card.html', {})
+                    <!-- background collection -->
+                    @@include('./html/main-background-collection.html', {})
+                    <!-- products slider -->
+                    @@include('./html/main-product-slider.html', {})
+                    <!-- products follow -->
+                    @@include('./html/main-products-follow.html', {})
+                    <!-- subscribe -->
+                    @@include('./html/main-subscribe.html', {})
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        @@include('./html/footer.html', {})
+    </div>
+</div>
+
+<script src="./js/app.min.js"></script>
+<script src="./js/fancybox.umd.js"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/main.js"></script>
+
+</body>
+</html>
