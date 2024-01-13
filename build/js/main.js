@@ -44,7 +44,7 @@ function getDirection() {
 //open dropMenu
 function toggleDropMenu() {
     let toggleDropButton = document.querySelectorAll('[data-drop]');
-    
+
     for (let a = 0; a < toggleDropButton.length; a++) {
         let dataDrop = toggleDropButton[a].getAttribute('data-drop');
 
